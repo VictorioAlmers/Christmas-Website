@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+nav,
+.header-bottom {
+  display: flex; /*biar bisa menjajar ke samping*/
+  justify-content: space-between; /*biar bisa kanan dan kiri*/
+  padding: 2rem;
+  position: relative;
+  animation: animate 5s;
+}
+
+.header-top {
+  display: flex; /*biar bisa menjajar ke samping*/
+  justify-content: space-between; /*biar bisa kanan dan kiri*/
+  position: relative;
+}
+
+.logo a {
+  color: white;
+  font-size: 2rem;
+  animation: animate 5s;
+}
+
+.header-title {
+  margin: auto auto; /*supaya paling tengah */
+  margin-bottom: 20vh;
+  font-size: 8rem;
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+.header-title span {
+  animation: animate 5s infinite;
+}
+
+h6 {
+  animation: animate 5s infinite;
+}
+
+.today-date {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  width: 300px;
+  justify-content: space-between; /*supaya ada jarak*/
+  align-items: center; /*supaya sejajar */
+}
+
+.menu li a {
+  color: #ffffff;
+}
+
+#about {
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 0; /*kiri kanannya 0*/
+}
+
+.about-container {
+  width: 900px;
+  height: 500px;
+  margin: auto auto;
+}
+
+.image-gallery {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  justify-content: space-between; /*supaya LOVE nya misah*/
+  margin-bottom: 2rem;
+}
+
+/*buat nampung image*/
+.image-box {
+  width: 22%;
+  height: 250px;
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.image-box:nth-child(even) {
+  align-self: flex-end;
+}
+
+.image-box img:hover {
+  opacity: 0.5;
+}
+
+.love {
+  position: absolute; /*biar numpuk*/
+  bottom: -8%;
+  left: 50%;
+  font-style: italic;
+  font-weight: 500px;
+}
+
+.about-info {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+footer i {
+  color: red;
+}
+
+@media only screen and (max-width: 950px) {
+  .about-container {
+    width: 90%;
+    height: 90%;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-title {
+    font-size: 3.5rem;
+  }
+  .logo a {
+    font-size: 1rem;
+  }
+  .today-date {
+    font-size: 1rem;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
